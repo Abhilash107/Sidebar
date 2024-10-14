@@ -166,3 +166,117 @@
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
+
+
+/* CSS of contact form */
+
+/* Full-body background for contact page */
+.contact_body {
+    background: url('top-view-set-gadgets-purple-neon-light-pink.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Contact form container */
+.contact_container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
+    color: white;
+    z-index: 1;
+}
+
+/* Title styling */
+.contact_container h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #00c9ff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input group */
+.input_group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Labels */
+.input_group label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    display: block;
+    color: #fff;
+}
+
+/* Inputs and textarea */
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form input[type="submit"],
+.contact_form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    margin-top: 8px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Textarea */
+.contact_form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Focus effects */
+.contact_form input[type="text"]:focus,
+.contact_form input[type="email"]:focus,
+.contact_form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 201, 255, 0.7);
+}
+
+/* Submit button */
+.contact_form input[type="submit"] {
+    background-color: #00c9ff;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+}
+
+/* Submit button hover effect */
+.contact_form input[type="submit"]:hover {
+    background-color: #009edc;
+    transform: translateY(-3px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact_container {
+        padding: 30px;
+    }
+    .contact_container h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact_container h2 {
+        font-size: 1.5em;
+    }
+}
