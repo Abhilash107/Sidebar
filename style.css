@@ -20,6 +20,7 @@
     left:-300px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+    transition: left 0.4s ease;
 
 }
 .sidebar_menu .logo{
