@@ -1,102 +1,126 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     list-style: none;
 }
-.main_box{
+
+.main_box {
     position: relative;
-    background: url('top-view-set-gadgets-purple-neon-light-pink.jpg')bottom no-repeat;
+    background: url('top-view-set-gadgets-purple-neon-light-pink.jpg') bottom no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100%;
-
-
 }
-.main_box .sidebar_menu{
+
+.main_box .sidebar_menu {
     position: fixed;
-    height:100vh;
+    height: 100vh;
     width: 300px;
-    left:-300px;
+    left: -300px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
     transition: left 0.4s ease;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.sidebar_menu .logo{
-    position: absolute;
+
+.sidebar_menu .logo {
     width: 100%;
     height: 80px;
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
-
+    position: relative;
 }
-.sidebar_menu .logo a{
+
+.sidebar_menu .logo a {
     position: absolute;
     left: 45px;
-    color:white;
+    color: white;
     font-size: 26px;
     font-weight: 500;
     line-height: 80px;
     text-decoration: none;
-
 }
-.sidebar_menu .menu{
+
+.sidebar_menu .btn_two {
     position: absolute;
-    top: 75px;
-    width: 100%;
-
-
+    right: 20px;
+    top: 25px;
 }
-.sidebar_menu .menu li{
+
+.sidebar_menu .btn_two i {
+    font-size: 29px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.btn_two i:hover {
+    font-size: 30px;
+}
+
+.sidebar_menu .menu {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-top: 0;
+}
+
+.sidebar_menu .menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.sidebar_menu .menu li {
     margin: 10px;
     padding: 15px 22px;
     transition: all 0.3s linear;
-
 }
-.sidebar_menu .menu i{
-    color:white;
+
+.sidebar_menu .menu i {
+    color: white;
     padding-right: 9px;
     font-size: 19px;
-
 }
-.sidebar_menu .menu a{
-    color:white;
+
+.sidebar_menu .menu a {
+    color: white;
     font-size: 19px;
     text-decoration: none;
-
-}
-.sidebar_menu .menu li:hover{
-    border:1px solid white;
-    box-shadow: 0 0 4px rgba(255,255,255,0.5);
 }
 
-.sidebar_menu .social_media{
-    position: absolute;
-    left:40%;
-    bottom:20px;
-    transform: translateX(-50%);
+.sidebar_menu .menu li:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
     cursor: pointer;
-
 }
-.social_media i{
+
+.sidebar_menu .social_media {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.social_media i {
     padding: 0 5px;
     color: #fff;
-    opacity:0.6;
-    font-size:18px;
-    transition: all 0.2 linear;
-
-
+    opacity: 0.6;
+    font-size: 18px;
+    transition: all 0.2s linear;
 }
-.social_media i:hover{
+
+.social_media i:hover {
     opacity: 1;
-
 }
 
-#check{
-   display: none;
+#check {
+    display: none;
 }
-.main_box .btn_one i{
-    color:white;
+
+.main_box .btn_one i {
+    color: white;
     font-size: 28px;
     font-weight: 600;
     position: absolute;
@@ -105,43 +129,40 @@
     cursor: pointer;
     opacity: 1;
     transition: all 0.3s linear;
+}
 
-}
-.sidebar_menu .btn_two i{
-    font-size: 29px;
-    color: #fff;
-    position: absolute;
-    left: 270px;
-    line-height: 82px;
-    cursor: pointer;
-    opacity: 1;
-    transition: all 0.3s linear;
-}
-.btn_one i:hover{
-    font-size: 30px;
-
-}
-.btn_two i:hover{
-    font-size: 30px;           
-}
-#check:checked ~.sidebar_menu{   
+#check:checked ~ .sidebar_menu {
     left: 0px;
 }
-#check:checked ~.btn_one i{
+
+#check:checked ~ .btn_one i {
     opacity: 0;
 }
-#check:checked ~.btn_two i{
+
+#check:checked ~ .btn_two i {
     opacity: 1;
 }
 
+.menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
 
+::-webkit-scrollbar {
+    width: 10px;
+}
 
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
 
-
-
-
-
-
-
-
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
