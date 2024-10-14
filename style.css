@@ -1,181 +1,231 @@
 :root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-gradient: linear-gradient(135deg, #5a6bb8 0%, #8646c7 100%);
     --text-color: #ffffff;
     --hover-color: rgba(255, 255, 255, 0.1);
     --transition-speed: 0.3s;
     --font-family: 'Poppins', sans-serif;
-  }
-  
-  * {
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-family);
-  }
-  
-  body {
-    background-color: #f4f7fe;
+}
+
+body {
+    background-image: url('./top-view-set-gadgets-purple-neon-light-pink.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--text-color);
-  }
-  
-  .main_box {
+}
+
+.main_box {
     position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
-  }
-  
-  .sidebar_menu {
+}
+
+.sidebar_menu {
     position: fixed;
     top: 0;
     left: -300px;
     height: 100vh;
     width: 300px;
     background: var(--primary-gradient);
+    /* background-color: transparent; */
     transition: left var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
+}
+
+.logo {
     padding: 30px 0;
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .logo a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
     color: var(--text-color);
     font-size: 28px;
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
-  }
-  
-  .menu {
+    flex-grow: 1;
+}
+
+.menu {
     padding: 20px 0;
-  }
-  
-  .menu ul {
+}
+
+.menu ul {
     list-style: none;
-  }
-  
-  .menu li {
+}
+
+.menu li {
     padding: 12px 25px;
     transition: background-color var(--transition-speed);
-  }
-  
-  .menu li:hover {
+}
+
+.menu li:hover {
     background-color: var(--hover-color);
-  }
-  
-  .menu a {
+}
+
+.menu a {
     color: var(--text-color);
     text-decoration: none;
     font-size: 16px;
     display: flex;
     align-items: center;
     transition: transform var(--transition-speed);
-  }
-  
-  .menu a:hover {
+}
+
+.menu a:hover {
     transform: translateX(5px);
-  }
-  
-  .menu i {
+}
+
+.menu i {
     margin-right: 15px;
     font-size: 20px;
-  }
-  
-  .social_media {
+}
+
+.social_media {
     position: absolute;
-    bottom: 20px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-  }
-  
-  .social_media a {
+}
+
+.social_media a {
     color: var(--text-color);
     font-size: 22px;
     margin: 0 12px;
     transition: transform var(--transition-speed), color var(--transition-speed);
-  }
-  
-  .social_media a:hover {
+}
+
+.social_media a:hover {
     transform: scale(1.2);
     color: #ffd700;
-  }
-  
-  #check {
+}
+
+#check {
     display: none;
-  }
-  
-  .btn_one, .btn_two {
+}
+
+.btn_one, .btn_two {
     position: fixed;
     cursor: pointer;
     color: #333;
     font-size: 30px;
     transition: all var(--transition-speed);
-  }
-  
-  .btn_one {
+}
+
+.btn_one {
     left: 20px;
     top: 20px;
-  }
-  
-  .btn_two {
+}
+
+.btn_two {
     top: 20px;
     right: 20px;
     opacity: 0;
     z-index: 1001;
     color: var(--text-color);
-  }
-  
-  #check:checked ~ .sidebar_menu {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+}
+
+#check:checked ~ .sidebar_menu {
     left: 0;
-  }
-  
-  #check:checked ~ .btn_one {
+}
+
+#check:checked ~ .btn_one {
     opacity: 0;
-  }
-  
-  #check:checked ~ .sidebar_menu .btn_two {
+}
+
+#check:checked ~ .sidebar_menu .btn_two {
     opacity: 1;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .sidebar_menu {
-      width: 100%;
-      left: -100%;
+        width: 100%;
+        left: -100%;
     }
-  }
-  
-  /* Add some animation to menu items */
-  @keyframes fadeInRight {
+}
+
+/* Add some animation to menu items */
+@keyframes fadeInRight {
     from {
-      opacity: 0;
-      transform: translateX(-20px);
+        opacity: 0;
+        transform: translateX(-20px);
     }
     to {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
-  
-  .menu li {
+}
+
+.menu li {
     animation: fadeInRight 0.5s ease forwards;
     opacity: 0;
-  }
-  
-  .menu li:nth-child(1) { animation-delay: 0.1s; }
-  .menu li:nth-child(2) { animation-delay: 0.2s; }
-  .menu li:nth-child(3) { animation-delay: 0.3s; }
-  .menu li:nth-child(4) { animation-delay: 0.4s; }
-  .menu li:nth-child(5) { animation-delay: 0.5s; }
-  .menu li:nth-child(6) { animation-delay: 0.6s; }
-  .menu li:nth-child(7) { animation-delay: 0.7s; }
-  .menu li:nth-child(8) { animation-delay: 0.8s; }
-  .menu li:nth-child(9) { animation-delay: 0.9s; }
-  .menu li:nth-child(10) { animation-delay: 1s; }
+}
+
+.menu li:nth-child(1) { animation-delay: 0.1s; }
+.menu li:nth-child(2) { animation-delay: 0.2s; }
+.menu li:nth-child(3) { animation-delay: 0.3s; }
+.menu li:nth-child(4) { animation-delay: 0.4s; }
+.menu li:nth-child(5) { animation-delay: 0.5s; }
+.menu li:nth-child(6) { animation-delay: 0.6s; }
+.menu li:nth-child(7) { animation-delay: 0.7s; }
+.menu li:nth-child(8) { animation-delay: 0.8s; }
+.menu li:nth-child(9) { animation-delay: 0.9s; }
+.menu li:nth-child(10) { animation-delay: 1s; }
+
+.profile {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile_img {
+    margin-right: 10px;
+}
+
+.profile_img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile_name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-right: auto;
+}
+
+.logout_icon {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10px;
+}

@@ -3,30 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Sidebar</title>
+    <title>Sidebar</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6afefce1fa.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main_box">
-        <!-- Sidebar toggle checkbox -->
         <input type="checkbox" id="check">
-        <!-- Sidebar open button (Hamburger icon) -->
         <label for="check" class="btn_one">
             <i class="fas fa-bars"></i>
         </label>
-        
-        <!-- Sidebar content -->
         <div class="sidebar_menu">
             <div class="logo">
-                <a href="#">Stylish Menu</a>
+                <a href="#">Menu</a>
+                <label for="check" class="btn_two">
+                    <i class="fas fa-times"></i>
+                </label>
             </div>
-            
-            <label for="check" class="btn_two">
-                <i class="fas fa-times"></i>
-            </label>
-            
-            <!-- Navigation menu -->
             <nav class="menu">
                 <ul>
                     <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
@@ -41,12 +34,20 @@
                     <li><a href="#"><i class="fas fa-question"></i>Help</a></li>
                 </ul>
             </nav>
-            
+
             <div class="social_media">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a> 
                 <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="profile">
+                <div class="profile_img">
+                    <img src="top-view-set-gadgets-purple-neon-light-pink.jpg" alt="profile">
+                </div>
+                <div class="profile_name">User</div>
+                <a href="#" class="logout_icon"><i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
     </div>
