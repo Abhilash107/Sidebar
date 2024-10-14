@@ -76,6 +76,8 @@
     margin: 10px;
     padding: 15px 22px;
     transition: all 0.3s linear;
+    border-radius: 10px;
+
 }
 
 .sidebar_menu .menu i {
@@ -88,11 +90,21 @@
     color: white;
     font-size: 19px;
     text-decoration: none;
+
+}
+.sidebar_menu .menu li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar_menu .menu li:hover {
-    border: 1px solid white;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+
+.sidebar_menu .social_media{
+    position: absolute;
+    left:40%;
+    bottom:20px;
+    transform: translateX(-50%);
     cursor: pointer;
 }
 
@@ -187,3 +199,39 @@
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
+
+@media screen and (max-width: 768px) {
+    .sidebar_menu .logo a {
+        font-size: 20px;
+        left: 20px;
+    }
+
+    .sidebar_menu .menu li {
+        padding: 10px 15px;
+    }
+
+    .sidebar_menu .menu i,.sidebar_menu .menu a {
+        font-size: 16px;
+    }
+
+    .sidebar_menu .social_media {
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar_menu .logo a {
+        font-size: 18px;
+    }
+
+    .sidebar_menu .menu li {
+        padding: 8px 10px;
+    }
+
+    .social_media i {
+        font-size: 16px;
+    }
+}
+
