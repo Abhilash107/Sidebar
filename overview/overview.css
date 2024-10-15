@@ -1,0 +1,101 @@
+/* overview.css */
+
+/* General Styling for Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #24243e;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #ff00c3;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.navbar a:hover {
+    color: #ff66ff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 1rem;
+}
+
+/* Container for the overview content */
+.container {
+    padding: 50px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Title */
+.title {
+    font-size: 2.5rem;
+    color: #ff00c3;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(255, 0, 195, 0.8);
+}
+
+/* Overview Box */
+.overview-box {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in;
+}
+
+.overview-box p {
+    font-size: 1.2rem;
+    color: #c7c7c7;
+    margin-bottom: 20px;
+}
+
+.overview-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.overview-box ul li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #c7c7c7;
+}
+
+.overview-box ul li::before {
+    content: "•";
+    color: #ff00c3;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
