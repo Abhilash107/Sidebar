@@ -1,0 +1,85 @@
+/* dashboard.css */
+
+/* General Styling for Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+}
+
+/* Main Box styling */
+.main_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+/* Futuristic animated background */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Dashboard Content styling */
+.dashboard-content {
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-content:hover {
+    transform: scale(1.05);
+}
+
+/* Heading styling */
+.dashboard-content h1 {
+    font-size: 3rem;
+    color: #ff00c3;
+    text-shadow: 2px 2px 5px rgba(255, 0, 195, 0.8);
+}
+
+/* Paragraph styling */
+.dashboard-content p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #c7c7c7;
+    letter-spacing: 1px;
+}
+
+/* Button styling */
+.dashboard-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #ff00c3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(255, 0, 195, 0.3);
+    transition: all 0.3s ease;
+}
+
+.dashboard-btn:hover {
+    background-color: #ff66ff;
+    box-shadow: 0 6px 15px rgba(255, 102, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Button click effect */
+.dashboard-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 7px rgba(255, 0, 195, 0.5);
+}

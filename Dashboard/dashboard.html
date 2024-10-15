@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Adjust the path if needed -->
+    <script src="https://kit.fontawesome.com/6afefce1fa.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../favicon.webp" type="image/png">
+    <link rel="stylesheet" href="../dashboard/dashboard.css">
+
+    <style>
+        .dashboard-content {
+            padding: 50px;
+            color: white;
+            text-align: center;
+        }
+
+        .dashboard-content h1 {
+            font-size: 3rem;
+        }
+
+        .dashboard-content p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .dashboard-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff00c3;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dashboard-btn:hover {
+            background-color: #ff66ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_box">
+        <div class="dashboard-content">
+            <h1>Welcome to the Dashboard</h1>
+            <p>Manage your settings, view stats, and explore additional features here.</p>
+            <button class="dashboard-btn" onclick="showAlert()">Click me for an action</button>
+        </div>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert('Button clicked! Perform your action here.');
+        }
+    </script>
+</body>
+</html>
