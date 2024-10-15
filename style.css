@@ -96,7 +96,7 @@
     align-items: center;
 }
 
-}
+
 .sidebar_menu .menu li:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #f0f0f0;
@@ -219,3 +219,11 @@
     }
 }
 
+.sidebar_menu .menu li i {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smoother transition */
+}
+
+.sidebar_menu .menu li:hover i {
+    transform: rotate(15deg); /* Slight rotation */
+    color: #ffdf00; /* Optional: Change color on hover for more emphasis */
+}
