@@ -91,7 +91,8 @@ h2 {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1rem;
   pointer-events: none;
-  transition: 0.5s;
+  transition: 0.5s, padding 0.5s;
+  padding: 5px;
 }
 
 .input-box input:focus ~ label,
@@ -100,6 +101,7 @@ h2 {
   left: 10px;
   color: #ff69b4;
   font-size: 0.85rem;
+  padding-bottom: 30px;
 }
 
 .remember {
