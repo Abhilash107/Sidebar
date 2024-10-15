@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
     list-style: none;
 }
 
 .main_box {
     position: relative;
-    background: url('top-view-set-gadgets-purple-neon-light-pink.jpg') bottom no-repeat;
+    background: url('top-view-set-gadgets-purple-neon-light-pink.webp') bottom no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -31,16 +33,17 @@
     height: 80px;
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
     position: relative;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .sidebar_menu .logo a {
-    position: absolute;
-    left: 45px;
-    color: white;
+    color: #d1d1d1;
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 700;
+    text-align: center;
     line-height: 80px;
     text-decoration: none;
+    display: block;
 }
 
 .sidebar_menu .btn_two {
@@ -69,7 +72,6 @@
 .sidebar_menu .menu ul {
     padding: 0;
     margin: 0;
-    list-style-type: none;
 }
 
 .sidebar_menu .menu li {
@@ -90,6 +92,9 @@
     color: white;
     font-size: 19px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 
 }
 .sidebar_menu .menu li:hover {
@@ -154,27 +159,6 @@
 #check:checked ~ .btn_two i {
     opacity: 1;
 }
-.sidebar_menu .logo {
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
-    background: rgba(0, 0, 0, 0.5); /* Optional: background color */
-}
-
-.sidebar_menu .logo .menu-title {
-    color: #ffcc00; /* Highlight color */
-    font-size: 26px; /* Font size */
-    font-weight: 700; /* Bold font */
-    text-align: center; /* Center the text */
-    line-height: 80px; /* Align with logo height */
-}
-.sidebar_menu .logo a {
-    color: inherit; /* Inherit color from the parent */
-    text-decoration: none; /* Remove underline */
-}
-
-
 
 .menu ul li {
     padding: 10px;
