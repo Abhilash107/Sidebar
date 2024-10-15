@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="../feedback/feedback.css"> <!-- Adjust the path if needed -->
+    <link rel="icon" href="../favicon.webp" type="image/png">
+    <script src="https://kit.fontawesome.com/6afefce1fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Sidebar</a>
+            <ul>
+                <li><a href="../index.html">Home</a><i class="fa-solid fa-house"></i></li>
+                <li><a href="../login/login.html">Login</a><i class="fa-solid fa-user"></i></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1 class="title">We Value Your Feedback!</h1>
+        <div class="feedback-form">
+            <form action="#">
+                <div class="input-box">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="input-box">
+                    <label for="message">Your Feedback</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
