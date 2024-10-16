@@ -23,7 +23,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
-  height: 520px;
+  height: 460px;
 }
 
 h2 {
@@ -62,8 +62,10 @@ h2 {
 
 .input-box {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  margin-top: 30px;
 }
+
 
 .input-box ion-icon {
   position: absolute;
@@ -107,6 +109,8 @@ h2 {
   color: #fff;
   display: flex;
   align-items: center;
+  /* margin-bottom: 70px; */
+  margin-top: -20px;
 }
 
 .btn {
@@ -118,6 +122,7 @@ h2 {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top:75px
 }
 
 .btn:hover {
