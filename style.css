@@ -6,7 +6,17 @@
     font-family: 'Poppins', sans-serif;
     list-style: none;
 }
-.main_box{
+
+.demo-layout-transparent {
+    background: url('../asset/top-view-set-gadgets-purple-neon-light-pink.jpg') center / cover;
+  }
+  .demo-layout-transparent .mdl-layout__header,
+  .demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+  }
+/*.main_box{
     position: relative;
     background: url('top-view-set-gadgets-purple-neon-light-pink.webp') bottom no-repeat;
     background-size: cover;
@@ -94,10 +104,18 @@
     display: flex;
     align-items: center;
 }
+
+
+.sidebar_menu .menu li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .sidebar_menu .menu li:hover{
     border:1px solid white;
     box-shadow: 0 0 4px rgba(255,255,255,0.5);
-}
+}*/
 
 .sidebar_menu .social_media{
     position: absolute;

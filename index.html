@@ -6,6 +6,11 @@
     <title>Sidebar</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6afefce1fa.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
 </head>
 <body>
   <!-- MDL Spinner Component with Single Color -->
@@ -19,6 +24,8 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
             <nav class="mdl-navigation">
+              <a  class="mdl-navigation__link"href="./login/login.html"><i class="fa-solid fa-user"></i>
+                LogIn</a>
               <a class="mdl-navigation__link" href="" ><i class="fas fa-qrcode"></i>Dashboard</a>
               <a class="mdl-navigation__link" href=""><i class="fas fa-calendar-week"></i>Events</a>
               <a class="mdl-navigation__link" href=""><i class="fas fa-question-circle"></i>About</a>
@@ -53,6 +60,9 @@
                 id="fixed-header-drawer-exp">
         </div>
       </div>
+
+      <a  class="mdl-navigation__link" href="./login/login.html"><i class="fa-solid fa-user"></i>
+        LogIn</a>
             <a class="mdl-navigation__link" href=""><i class="fas fa-qrcode"></i>Dashboard</a>
             <a class="mdl-navigation__link" href="">Events</a>
             <a class="mdl-navigation__link" href=""> About</a>
@@ -100,30 +110,17 @@
                 <li><a href="#">Resources</a></li>
               </ul>
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#"><i class="fas fa-qrcode"></i>
-                        Dashboard
-                    </a></li>
-                    <li><a href="#"><i class="fas fa-link"></i>
-                        Shortcuts</a></li>
-                    <li><a href="#"><i class="fas fa-stream"></i>
-                        Overview</a></li>
-                    <li><a href="#"><i class="fas fa-calendar-week"></i>
-                        Events</a></li>
-                    <li><a href="#"><i class="fas fa-question-circle"></i>
-                        About</a></li>
-                    <li><a href="#"><i class="fas fa-sliders-h"></i>
-                        Services</a></li>
-                    <li><a href="#"><i class="fas fa-phone-volume"></i>
-                        Contact</a></li>
-                    <li><a href="#"><i class="fas fa-comments"></i>
-                        Feedback</a></li>
-                        <li><a href="#"><i class="fas fa-commenting"></i>
-                            FAQ's</a></li>
-                            <li><a href="#"><i class="fas fa-question"></i>
-                                Help</a></li>
-                </ul>
+        
+            <div class="mdl-mega-footer__drop-down-section">
+              <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer__heading">Technology</h1>
+              <ul class="mdl-mega-footer__link-list">
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Patterns</a></li>
+                <li><a href="#">Usage</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contracts</a></li>
+              </ul>
             </div>
         
             <div class="mdl-mega-footer__drop-down-section">
@@ -135,10 +132,19 @@
                 <li><a href="#">Contact us</a></li>
               </ul>
             </div>
-
-            
-        </div>
         
-    </div>
+          </div>
+        
+          <div class="mdl-mega-footer__bottom-section">
+            <div class="mdl-logo">Title</div>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy & Terms</a></li>
+            </ul>
+          </div>
+        
+        </footer>
+
+      </div>
 </body>
 </html>
