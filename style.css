@@ -4,7 +4,17 @@
     font-family:'Times New Roman', Times, serif;
     list-style: none;
 }
-.main_box{
+
+.demo-layout-transparent {
+    background: url('../asset/top-view-set-gadgets-purple-neon-light-pink.jpg') center / cover;
+  }
+  .demo-layout-transparent .mdl-layout__header,
+  .demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+  }
+/*.main_box{
     position: relative;
     background: url('top-view-set-gadgets-purple-neon-light-pink.jpg')bottom no-repeat;
     background-size: cover;
@@ -68,7 +78,7 @@
 .sidebar_menu .menu li:hover{
     border:1px solid white;
     box-shadow: 0 0 4px rgba(255,255,255,0.5);
-}
+}*/
 
 .sidebar_menu .social_media{
     position: absolute;
