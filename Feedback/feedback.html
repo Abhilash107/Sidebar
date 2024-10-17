@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar | Feedback</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+        <a  href="../index.html" class="logo">Sidebar</a>
+    </header>
+
+
+    <div class="container">
+        <form>
+            <h1>Feedback Form</h1>
+            <h3>We value your feedback! </h3>
+            <h3>Please take a while and fill this form</h3>
+
+            <div class="input-box">
+             <input type="text" id="firstName" placeholder="First Name" required>
+             <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+
+            <br>
+            
+            <div class="input-box">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="mobile" placeholder="Mobile" required>
+            </div>
+
+            <br>
+            
+
+            <h4>Feedback type</h4>
+
+            <div class="input-box">
+                <input type="radio" name="feedbacktype">
+                <label>Suggestion</label>
+                <br>
+                
+                <input type="radio" name="feedbacktype">
+                <label>Bug report</label>             
+                <br>
+
+                <input type="radio" name="feedbacktype">
+                <label>Complaint</label>    
+                <br>
+
+                <input type="radio" name="feedbacktype">
+                <label>Other</label>
+                <br>
+                <input type="text" id="other" name="other" placeholder="Please specify it here">
+            </div>
+
+            <h4>Feedback Details</h4>
+
+            <div class="feedbackdetails">
+                <input type="text" id="subject" name="subject" placeholder="Enter your feedback subject">
+            </div>
+            
+            <div class="feedbackdetails">
+                <textarea rows="4" cols="30 ">Enter the detailed feedback here....</textarea>
+            </div>
+
+            <br><br><br>
+
+            <h4>How satisfied are you ?</h4>
+            
+            <div class="satisfaction-group">
+                <input type="radio" id="satisfaction" name="satisfaction">
+                <label>Very Satisfied</label>
+                <br>
+                
+                <input type="radio" id="satisfaction" name="satisfaction">
+                <label>Satisfied</label>             
+                <br>
+
+                <input type="radio" id="satisfaction" name="satisfaction">
+                <label>Neutral</label>    
+                <br>
+
+                <input type="radio" id="satisfaction" name="satisfaction">
+                <label>Dissatisfied</label>    
+                <br>
+
+                <input type="radio" id="satisfaction" name="satisfaction">
+                <label>Very Dissatisfied</label>    
+                <br>
+            </div>
+
+            <br>
+
+            <div class="button">
+                <input type="submit" id="submit" value="Submit my feedback">
+                <br>
+                <h3>Thank you for your feedback !!</h3>
+            </div>
+
+            
+        
+        </form>
+    </div>
+</body>
+</html>

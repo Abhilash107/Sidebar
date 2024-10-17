@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  height: auto;
+  background: url("../top-view-set-gadgets-purple-neon-light-pink.jpg")
+    no-repeat center center/cover;
+  backdrop-filter: blur(10px);
+}
+
+/* Navbar styling */
+.navbar {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  align-self: center;
+  width: min(500px,80vw);
+  background: rgba(124, 121, 121, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  height: 800px;
+}
+
+.container form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.feedbackdetails {
+    width: 100%;
+    height: 25px;
+    /* padding-left: 10px; */
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    /* border-bottom: 2px solid #fff; */
+    color: #fff;
+  }
+  .feedbackdetails::placeholder {
+    color: #ddd;
+  }
+
+.container form h1 {
+  color: #fff;
+  font-weight: 500;
+  margin: 5px 0 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.container form h3 {
+  color: #000;
+  margin: 5px 0 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.container form input {
+  width: calc(50% - 20px);
+  height: 20px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+.container form input::placeholder {
+  color: #ddd;
+}
+
+#other {
+  width: calc(100% - 20px); 
+  margin-left: 30%;
+}
+
+#other::placeholder {
+  color: #ddd;
+}
+
+#subject {
+    width: 100%; 
+}
+
+#satisfaction {
+    display: inline-block;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+  }
+
+.container form input#lastName,
+.container form input#mobile {
+  margin-left: 20px;
+}
+
+.container form textarea {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  resize: none;
+}
+
+#submit{
+    width: calc(100% - 60px);
+    height: 30px;
+    padding-left: 10px;
+    outline: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: red;
+    color: #000;
+    display: block;             
+    margin: 0 auto; 
+
+}
