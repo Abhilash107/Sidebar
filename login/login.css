@@ -1,211 +1,151 @@
-/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
+  font-family: 'Arial', sans-serif;
+  background: url('top-view-set-gadgets-purple-neon-light-pink.jpg') no-repeat center center fixed; /* Add your background image here */
+  background-size: cover; /* Cover the entire background */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('/top-view-set-gadgets-purple-neon-light-pink.webp') no-repeat center center/cover;
-  backdrop-filter: blur(10px);
+  overflow: hidden; /* Prevent scrollbars */
 }
 
 .container {
-  width: 400px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  perspective: 1000px;
+}
+
+.card-container {
+  width: 350px;
+  height: 450px;
   position: relative;
-  height: 460px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border-radius: 10px;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px); /* Glass effect */
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+.back {
+  background: rgba(250, 211, 201, 0.6); /* Slightly darker for the back */
+  color: white;
+  transform: rotateY(180deg);
 }
 
 h2 {
-  color: #fff;
-  text-align: center;
   margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Container */
-.form-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* Each form will take the full width */
-.form-box {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-  z-index: 1;
-}
-
-.form-box.active {
-  opacity: 1;
-  transform: translateX(0);
-  z-index: 2;
-}
-
-.form-box.inactive {
-  transform: translateX(-100%);
-}
-
-.input-box {
-  position: relative;
-  margin-bottom: 40px;
-  margin-top: 30px;
-}
-
-
-.input-box ion-icon {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  color: #ff69b4;
-}
-
-.input-box input {
-  width: 100%;
-  padding: 10px 35px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  outline: none;
-  color: #fff;
-  border-radius: 8px;
-}
-
-.input-box label {
-  position: absolute;
-  top: 50%;
-  left: 35px;
-  transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1rem;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
-  top: -5px;
-  left: 10px;
-  color: #ff69b4;
-  font-size: 0.85rem;
-  padding-bottom:20px;
-}
-
-.remember {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  /* margin-bottom: 70px; */
-  margin-top: -20px;
-}
-
-.btn {
-  width: 100%;
+input {
+  width: 80%;
   padding: 10px;
-  background: #ff69b4;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top:75px
-}
-
-.btn:hover {
-  background: #ff2a8b;
-}
-
-.login-signup {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.login-signup a {
-  color: #ff69b4;
-  text-decoration: none;
-}
-.login-signup p{
-    color: white;
-}
-
-.login-signup a:hover {
-  text-decoration: underline;
-}
-
-.toggle-password {
-    position: absolute;
-    top: 50%;
-    right: 30px; /* Adjust as necessary */
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #ff69b4; /* Match with your theme */
-    transform: translateY(-50%);
-  }
-  
-@media (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
-}
-
-
-/* Navbar styling */
-.navbar {
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: rgba(255, 255,255,0.07); */
-  backdrop-filter: blur(10px);
-  padding: 1rem;
-}
-
-.navbar .logo {
-  font-size:2rem;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  font-family: sans-serif;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-}
-
-.navbar ul li {
-  margin-left: 20px;
-  font-size: 1.3rem;
-  color:white;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  margin: 10px 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border-color 0.3s ease; /* Smooth transition for border */
+}
+
+input:focus {
+  border-color: #ff7e5f; /* Change border color on focus */
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #f9a05d;
+  color: white;
+  transition: background 0.3s, transform 0.2s; /* Transition for background and transform */
+}
+
+button:hover {
+  background: #ff7e5f;
+  transform: translateY(-2px); /* Button lift effect */
+}
+
+p {
+  margin-top: 10px;
+  color: #161616;
+}
+
+a {
+  color: #c23d00;
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth color change */
+}
+
+a:hover {
+  color: #040054; /* Change color on hover */
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.home-link {
+  font-size: 14px;
+  color: #ff7e5f; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth color change */
+  position: absolute; /* Position absolute to place in the left corner */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center the icon and text vertically */
+}
+
+.home-link i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.home-link:hover {
+  color: #feb47b; /* Change color on hover */
 }
