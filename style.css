@@ -7,18 +7,9 @@
     list-style: none;
 }
 
-.demo-layout-transparent {
-    background: url('../asset/top-view-set-gadgets-purple-neon-light-pink.jpg') center / cover;
-  }
-  .demo-layout-transparent .mdl-layout__header,
-  .demo-layout-transparent .mdl-layout__drawer-button {
-    /* This background is dark, so we set text to white. Use 87% black instead if
-       your background is light. */
-    color: white;
-  }
-/*.main_box{
+.main_box{
     position: relative;
-    background: url('top-view-set-gadgets-purple-neon-light-pink.webp') bottom no-repeat;
+    background: url('asset/top-view-set-gadgets-purple-neon-light-pink.jpg') bottom no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -238,4 +229,27 @@
 .sidebar_menu .menu li:hover i {
     transform: rotate(15deg); /* Slight rotation */
     color: #ffdf00; /* Optional: Change color on hover for more emphasis */
+}
+#backToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 1s;
+}
+
+#backToTopBtn:hover {
+    background-color: #e91e63;
+    transform: translateY(-3px);
+}
+
+#backToTopBtn:active {
+    transform: translateY(1px);
 }
