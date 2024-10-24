@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link rel="stylesheet" href="./faqs.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="main_box">
+      <div class="content">
+        <h1>FAQs</h1>
+        <div class="item open">
+          <div class="title">
+            <span>Features</span>
+            <span class="chevron-down"></span>
+          </div>
+          <p class="text">
+            A hidden sidebar menu that slides in and out using Font Awesome
+            icons. Smooth transitions and hover effects. Social media links at
+            the bottom of the sidebar. Fully responsive design using pure HTML
+            and CSS.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="title">
+            <span>How to Setup</span>
+            <span class="chevron-down"></span>
+          </div>
+          <p class="text">
+            First, click the "Fork" button at the top right of this page to
+            create your own copy of the repository. Now, clone the repository
+            from your GitHub account to your local machine. Simply open the
+            index.html file in any browser to see the sidebar menu in action.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="title">
+            <span>Suggestion for Enhancements</span>
+            <span class="chevron-down"></span>
+          </div>
+          <p class="text">
+            Contributors are encouraged to implement and submit pull requests
+            for any of these features: Theme Toggle, User Profile, JavaScript
+            Functionalities, Responsive Design Improvements, Search
+            Functionality, Animations, Collapsible Menu Items.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="title">
+            <span>How to Contribute</span>
+            <span class="chevron-down"></span>
+          </div>
+          <p class="text">
+            Before making any changes, create a new branch. Once you've made
+            your changes, stage them and create a commit. Push the branch to
+            your forked repository. Go to your forked repository on GitHub and
+            click on the "Compare & Pull Request" button to submit your changes
+            for review. Make sure to compare your branch with the main branch of
+            this repository.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var acc = document.getElementsByClassName("title");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</html>
