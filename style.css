@@ -66,7 +66,6 @@
 .sidebar_menu .menu {
     flex-grow: 1;
     overflow-y: auto;
-    margin-top: 0;
 }
 
 .sidebar_menu .menu ul {
@@ -79,7 +78,6 @@
     padding: 15px 22px;
     transition: all 0.3s linear;
     border-radius: 10px;
-
 }
 
 .sidebar_menu .menu i {
@@ -96,7 +94,6 @@
     align-items: center;
 }
 
-
 .sidebar_menu .menu li:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #f0f0f0;
@@ -104,16 +101,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-.sidebar_menu .social_media{
+.sidebar_menu .social_media {
     position: absolute;
-    left:40%;
-    bottom:20px;
+    left: 40%;
+    bottom: 20px;
     transform: translateX(-50%);
     cursor: pointer;
-}
-
-.sidebar_menu .social_media {
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
@@ -184,18 +177,56 @@
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+.sidebar_menu .menu li i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sidebar_menu .menu li:hover i {
+    transform: rotate(15deg);
+    color: #ffdf00;
+}
+
+@media screen and (max-width: 1024px) {
+    .main_box .sidebar_menu {
+        width: 250px;
+    }
+
+    .main_box .btn_one i {
+        font-size: 24px;
+    }
+
+    .sidebar_menu .menu a {
+        font-size: 17px;
+    }
+
+    .sidebar_menu .menu i {
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .main_box .sidebar_menu {
+        width: 220px;
+    }
+
+    .main_box .btn_one i {
+        font-size: 22px;
+    }
+
+    .sidebar_menu .menu a {
+        font-size: 15px;
+    }
+
+    .sidebar_menu .menu i {
+        font-size: 14px;
+    }
+
     .sidebar_menu .logo a {
         font-size: 20px;
-        left: 20px;
     }
 
     .sidebar_menu .menu li {
         padding: 10px 15px;
-    }
-
-    .sidebar_menu .menu i,.sidebar_menu .menu a {
-        font-size: 16px;
     }
 
     .sidebar_menu .social_media {
@@ -206,6 +237,22 @@
 }
 
 @media screen and (max-width: 480px) {
+    .main_box .sidebar_menu {
+        width: 200px;
+    }
+
+    .main_box .btn_one i {
+        font-size: 20px;
+    }
+
+    .sidebar_menu .menu a {
+        font-size: 13px;
+    }
+
+    .sidebar_menu .menu i {
+        font-size: 12px;
+    }
+
     .sidebar_menu .logo a {
         font-size: 18px;
     }
@@ -215,15 +262,6 @@
     }
 
     .social_media i {
-        font-size: 16px;
+        font-size: 14px;
     }
-}
-
-.sidebar_menu .menu li i {
-    transition: transform 0.3s ease, color 0.3s ease; /* Smoother transition */
-}
-
-.sidebar_menu .menu li:hover i {
-    transform: rotate(15deg); /* Slight rotation */
-    color: #ffdf00; /* Optional: Change color on hover for more emphasis */
 }
