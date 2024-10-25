@@ -8,25 +8,57 @@
 }
 
 .main_box {
-    position: relative;
-    background: url('top-view-set-gadgets-purple-neon-light-pink.webp') bottom no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('top-view-set-gadgets-purple-neon-light-pink.webp') no-repeat center center/cover;
     height: 100vh;
-    width: 100%;
 }
 
-.main_box .sidebar_menu {
-    position: fixed;
-    height: 100vh;
-    width: 300px;
-    left: -300px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
-    transition: left 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+/* Social media alignment */
+.social_media {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align:end; /* Center the icons horizontally */
 }
+
+.social_media a {
+    margin: 0 10px; /* Space between icons */
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social_media a:hover {
+    opacity: 1;
+}
+.sidebar_menu .menu li {
+    margin: 10px;
+    padding: 15px 22px;
+    transition: all 0.3s linear;
+    border-radius: 10px;
+    position: relative; /* For the before pseudo-element */
+}
+
+.sidebar_menu .menu li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2); /* Hover background */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    border-radius: 10px; /* Match border-radius */
+}
+
+.sidebar_menu .menu li:hover::before {
+    opacity: 1; /* Show background on hover */
+}
+
 
 .sidebar_menu .logo {
     width: 100%;
@@ -52,6 +84,33 @@
     top: 25px;
 }
 
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Background of the scrollbar track */
+    border-radius: 10px; /* Round corners */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7); /* Color on hover */
+}
+.sidebar_menu {
+    transition: transform 0.3s ease;
+}
+
+#check:checked ~ .sidebar_menu {
+    transform: translateX(0); /* Slide in */
+}
+
+
 .sidebar_menu .btn_two i {
     font-size: 29px;
     color: #fff;
@@ -66,6 +125,7 @@
 .sidebar_menu .menu {
     flex-grow: 1;
     overflow-y: auto;
+    margin-top: 0;
 }
 
 .sidebar_menu .menu ul {
@@ -78,6 +138,7 @@
     padding: 15px 22px;
     transition: all 0.3s linear;
     border-radius: 10px;
+
 }
 
 .sidebar_menu .menu i {
@@ -94,6 +155,7 @@
     align-items: center;
 }
 
+
 .sidebar_menu .menu li:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #f0f0f0;
@@ -101,12 +163,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar_menu .social_media {
+
+.sidebar_menu .social_media{
     position: absolute;
-    left: 40%;
-    bottom: 20px;
+    left:40%;
+    bottom:20px;
     transform: translateX(-50%);
     cursor: pointer;
+}
+
+.sidebar_menu .social_media {
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
@@ -177,56 +243,18 @@
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.sidebar_menu .menu li i {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.sidebar_menu .menu li:hover i {
-    transform: rotate(15deg);
-    color: #ffdf00;
-}
-
-@media screen and (max-width: 1024px) {
-    .main_box .sidebar_menu {
-        width: 250px;
-    }
-
-    .main_box .btn_one i {
-        font-size: 24px;
-    }
-
-    .sidebar_menu .menu a {
-        font-size: 17px;
-    }
-
-    .sidebar_menu .menu i {
-        font-size: 16px;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    .main_box .sidebar_menu {
-        width: 220px;
-    }
-
-    .main_box .btn_one i {
-        font-size: 22px;
-    }
-
-    .sidebar_menu .menu a {
-        font-size: 15px;
-    }
-
-    .sidebar_menu .menu i {
-        font-size: 14px;
-    }
-
     .sidebar_menu .logo a {
         font-size: 20px;
+        left: 20px;
     }
 
     .sidebar_menu .menu li {
         padding: 10px 15px;
+    }
+
+    .sidebar_menu .menu i,.sidebar_menu .menu a {
+        font-size: 16px;
     }
 
     .sidebar_menu .social_media {
@@ -237,22 +265,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    .main_box .sidebar_menu {
-        width: 200px;
-    }
-
-    .main_box .btn_one i {
-        font-size: 20px;
-    }
-
-    .sidebar_menu .menu a {
-        font-size: 13px;
-    }
-
-    .sidebar_menu .menu i {
-        font-size: 12px;
-    }
-
     .sidebar_menu .logo a {
         font-size: 18px;
     }
@@ -262,6 +274,96 @@
     }
 
     .social_media i {
-        font-size: 14px;
+        font-size: 16px;
     }
+}
+
+.sidebar_menu .menu li i {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smoother transition */
+}
+
+.sidebar_menu .menu li:hover i {
+    transform: rotate(15deg); /* Slight rotation */
+    color: #ffdf00; /* Optional: Change color on hover for more emphasis */
+}
+
+
+/* Background Blur Effect */
+.main_box .sidebar_menu {
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    left: -300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Adding background blur */
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+    transition: left 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Smoother transitions for hover effect */
+.sidebar_menu .menu li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar_menu .menu li i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Button Color Pop */
+.sidebar_menu .menu a {
+    color: white;
+    font-size: 19px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.sidebar_menu .menu li:hover i {
+    transform: rotate(15deg);
+    color: #ffdf00; /* Eye-catching hover color */
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidebar_menu .menu i,.sidebar_menu .menu a {
+        font-size: 16px;
+    }
+
+    .sidebar_menu .menu li {
+        padding: 8px 15px; 
+    }
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.social_media a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social_media a:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    opacity: 1;
 }
