@@ -11,6 +11,9 @@
   width: 100%;
 }
 .content {
+  border-style: solid;
+  border-width: medium;
+  border-radius: 3vw;
   max-width: 900px;
   margin: 0 auto;
   padding: 15px 20px;
@@ -18,6 +21,7 @@
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
 .content h1 {
   text-align: center;
