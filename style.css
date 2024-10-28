@@ -265,3 +265,52 @@
         font-size: 14px;
     }
 }
+
+
+/* Footer-section */
+
+/* Footer styling for social media icons */
+footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px 0;
+    background: linear-gradient(135deg, #6060ee, #FF69B4, #f44343);
+    text-align: center;
+    /* background-color: #e5318b; */
+}
+
+footer .social_media {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+footer .social_media a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social_media a:hover {
+    color: whitesmoke /* Color change on hover */
+    
+}
+
+footer .social_media a:hover {
+    color: #fff;
+    text-decoration: none;
+    scale: (2);
+    transition: color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar_menu {
+        width: 200px;
+    }
+
+    .sidebar_menu .menu ul li a {
+        font-size: 14px;
+    }
+}
