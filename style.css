@@ -1,66 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
 }
 
 .main_box {
-    position: relative;
-    background: url('top-view-set-gadgets-purple-neon-light-pink.webp') bottom no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
+  position: relative;
+  background: url("top-view-set-gadgets-purple-neon-light-pink.webp") bottom
+    no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
 }
 
 .main_box .sidebar_menu {
-    position: fixed;
-    height: 100vh;
-    width: 300px;
-    left: -300px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
-    transition: left 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  position: fixed;
+  height: 100vh;
+  width: 300px;
+  left: -300px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+  transition: left 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sidebar_menu .logo {
-    width: 100%;
-    height: 80px;
-    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
-    position: relative;
-    background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .sidebar_menu .logo a {
-    color: #d1d1d1;
-    font-size: 26px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 80px;
-    text-decoration: none;
-    display: block;
+  color: #d1d1d1;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 80px;
+  text-decoration: none;
+  display: block;
 }
 
 .sidebar_menu .btn_two {
-    position: absolute;
-    right: 20px;
-    top: 25px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
 }
 
 .sidebar_menu .btn_two i {
-    font-size: 29px;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s linear;
+  font-size: 29px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s linear;
 }
 
 .btn_two i:hover {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .sidebar_menu .menu {
@@ -69,8 +70,8 @@
 }
 
 .sidebar_menu .menu ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar_menu .menu li {
@@ -81,24 +82,24 @@
 }
 
 .sidebar_menu .menu i {
-    color: white;
-    padding-right: 9px;
-    font-size: 19px;
+  color: white;
+  padding-right: 9px;
+  font-size: 19px;
 }
 
 .sidebar_menu .menu a {
-    color: white;
-    font-size: 19px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+  color: white;
+  font-size: 19px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar_menu .menu li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #f0f0f0;
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar_menu .social_media {
@@ -114,67 +115,67 @@
 }
 
 .social_media i {
-    padding: 0 5px;
-    color: #fff;
-    opacity: 0.6;
-    font-size: 18px;
-    transition: all 0.2s linear;
+  padding: 0 5px;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 18px;
+  transition: all 0.2s linear;
 }
 
 .social_media i:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 #check {
-    display: none;
+  display: none;
 }
 
 .main_box .btn_one i {
-    color: white;
-    font-size: 28px;
-    font-weight: 600;
-    position: absolute;
-    left: 13px;
-    line-height: 80px;
-    cursor: pointer;
-    opacity: 1;
-    transition: all 0.3s linear;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  position: absolute;
+  left: 13px;
+  line-height: 80px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;
 }
 
 #check:checked ~ .sidebar_menu {
-    left: 0px;
+  left: 0px;
 }
 
 #check:checked ~ .btn_one i {
-    opacity: 0;
+  opacity: 0;
 }
 
 #check:checked ~ .btn_two i {
-    opacity: 1;
+  opacity: 1;
 }
 
 .menu ul li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .sidebar_menu .menu li i {
@@ -257,9 +258,9 @@
         font-size: 18px;
     }
 
-    .sidebar_menu .menu li {
-        padding: 8px 10px;
-    }
+  .sidebar_menu .menu li {
+    padding: 8px 10px;
+  }
 
     .social_media i {
         font-size: 14px;

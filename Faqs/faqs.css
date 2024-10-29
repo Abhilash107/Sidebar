@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  transition: 0.3s;
+}
+.main_box {
+  background: url("../login/top-view-set-gadgets-purple-neon-light-pink.jpg")
+    bottom no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.content {
+  border-style: solid;
+  border-width: medium;
+  border-radius: 3vw;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+.content h1 {
+  text-align: center;
+}
+.item {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item .title {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item .title span {
+  font-size: 2rem;
+}
+
+.text {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.chevron-down::before {
+  content: "\f063";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/* Flexbox properties for mobile responsiveness */
+@media (max-width: 600px) {
+  .main_box {
+    padding: 10px;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  .item .title span {
+    font-size: 1rem;
+  }
+}
