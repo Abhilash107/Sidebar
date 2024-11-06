@@ -7,6 +7,33 @@
   list-style: none;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.header_button {
+    border-radius: 10px 10px;
+    padding: 5px 10px;
+    background-color: #3fffff80;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border: 2px solid #3fffff80;
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+}
+
+.header_button:hover {
+    background-color: #16dbdb;
+    color: #fff;
+    border: 2px solid #3fffff;
+}
+
 .main_box {
   position: relative;
   background: url("top-view-set-gadgets-purple-neon-light-pink.webp") bottom
@@ -16,17 +43,35 @@
   width: 100%;
 }
 
-.main_box .sidebar_menu {
-  position: fixed;
-  height: 100vh;
-  width: 300px;
-  left: -300px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
-  transition: left 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.sidebar_menu {
+    position: fixed;
+	  top: 0;
+    width: 300px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+}
+
+.sidebar_menu.left {
+    left: -300px;
+    transition: left 0.4s ease;
+}
+
+.sidebar_menu.right {
+    right: -300px;
+    transition: right 0.4s ease;
+}
+
+#check:checked ~ .sidebar_menu.left {
+    left: 0;
+}
+
+#check:checked ~ .sidebar_menu.right {
+    right: 0;
 }
 
 .sidebar_menu .logo {
@@ -48,9 +93,16 @@
 }
 
 .sidebar_menu .btn_two {
-  position: absolute;
-  right: 20px;
-  top: 25px;
+    position: absolute;
+    top: 25px;
+}
+
+.sidebar_menu.left .btn_two {
+    right: 20px;
+}
+
+.sidebar_menu.right .btn_two {
+    left: 20px;
 }
 
 .sidebar_menu .btn_two i {
@@ -130,28 +182,35 @@
   display: none;
 }
 
-.main_box .btn_one i {
-  color: white;
-  font-size: 28px;
-  font-weight: 600;
-  position: absolute;
-  left: 13px;
-  line-height: 80px;
-  cursor: pointer;
-  opacity: 1;
-  transition: all 0.3s linear;
+.btn_one {
+    position: absolute;
+	top: 0;
+    line-height: 80px;
 }
 
-#check:checked ~ .sidebar_menu {
-  left: 0px;
+.btn_one.left {
+    left: 13px;
+}
+
+.btn_one.right {
+    right: 13px;
+}
+
+.btn_one i {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s linear;
 }
 
 #check:checked ~ .btn_one i {
   opacity: 0;
 }
 
-#check:checked ~ .btn_two i {
-  opacity: 1;
+#check:checked ~ .sidebar_menu .btn_two i {
+    opacity: 1;
 }
 
 .menu ul li {
@@ -188,11 +247,11 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .main_box .sidebar_menu {
+    .sidebar_menu {
         width: 250px;
     }
 
-    .main_box .btn_one i {
+    .btn_one i {
         font-size: 24px;
     }
 
@@ -206,11 +265,11 @@
 }
 
 @media screen and (max-width: 768px) {
-    .main_box .sidebar_menu {
+    .sidebar_menu {
         width: 220px;
     }
 
-    .main_box .btn_one i {
+    .btn_one i {
         font-size: 22px;
     }
 
@@ -238,11 +297,11 @@
 }
 
 @media screen and (max-width: 480px) {
-    .main_box .sidebar_menu {
+    .sidebar_menu {
         width: 200px;
     }
 
-    .main_box .btn_one i {
+    .btn_one i {
         font-size: 20px;
     }
 
